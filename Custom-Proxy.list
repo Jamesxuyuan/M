@@ -1,8 +1,10 @@
 #代理
+
 #      DOMAIN-SUFFIX,   #模版
 DOMAIN-SUFFIX,op.gg
 
-#      IP-CIDR
+
+#      IP-CIDR,         #模版
 IP-CIDR,8.8.8.8/32
 IP-CIDR,8.8.4.4/32
 IP-CIDR,1.1.1.1/32
