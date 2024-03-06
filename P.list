@@ -1,8 +1,7 @@
 #代理
 
 #      DOMAIN-SUFFIX,   #模版
-DOMAIN-SUFFIX,op.gg
-
+DOMAIN-SUFFIX,op.g
 
 #      IP-CIDR,         #模版
 #
