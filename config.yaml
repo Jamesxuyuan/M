@@ -92,7 +92,7 @@ dns:
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
 pr: &pr {type: select, proxies: [🚀 默认代理, 👋 手动切换, 直连]}
 proxy-groups:
-  - {name: 🚀 默认代理,  <<: *pr}
+  - {name: 🚀 默认代理, type: select, proxies: [♻️ 自动选择, 👋 手动切换, 直连]}
   - {name: 🐬 OneDrive, <<: *pr}
   - {name: 🪟 Microsoft, <<: *pr}
   - {name: 🐟 漏网之鱼, <<: *pr}
