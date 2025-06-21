@@ -91,15 +91,9 @@ dns:
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
 pr: &pr {type: select, proxies: [🚀 默认代理, 🌐 全部节点, 直连]}
 proxy-groups:
-  - {name: 🚀 默认代理, type: select, proxies: [🌐 全部节点, 直连]}
-  - {name: 📹 YouTube, <<: *pr}
-  - {name: 🍀 Google, <<: *pr}
-  - {name: 🤖 ChatGPT, <<: *pr}
-  - {name: 👨🏿‍💻 GitHub, <<: *pr}
+  - {name: 🚀 默认代理, type: select, proxies: [♻️ 自动选择, 🌐 全部节点, 直连]}
   - {name: 🐬 OneDrive, <<: *pr}
   - {name: 🪟 Microsoft, <<: *pr}
-  - {name: 🎵 TikTok, <<: *pr}
-  - {name: 📲 Telegram, <<: *pr}
   - {name: ✈️ Speedtest, <<: *pr}
   - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
@@ -114,20 +108,20 @@ rules:
   - RULE-SET,private_domain,直连
   - RULE-SET,apple_domain,🍎 Apple
   - RULE-SET,proxylite,🚀 默认代理
-  - RULE-SET,ai,🤖 ChatGPT
-  - RULE-SET,github_domain,👨🏿‍💻 GitHub
-  - RULE-SET,youtube_domain,📹 YouTube
-  - RULE-SET,google_domain,🍀 Google
+  - RULE-SET,ai,🚀 默认代理
+  - RULE-SET,github_domain,🚀 默认代理
+  - RULE-SET,youtube_domain,🚀 默认代理
+  - RULE-SET,google_domain,🚀 默认代理
   - RULE-SET,onedrive_domain,🐬 OneDrive
   - RULE-SET,microsoft_domain,🪟 Microsoft
-  - RULE-SET,tiktok_domain,🎵 TikTok
+  - RULE-SET,tiktok_domain,🚀 默认代理
   - RULE-SET,speedtest_domain,✈️ Speedtest
-  - RULE-SET,telegram_domain,📲 Telegram
+  - RULE-SET,telegram_domain,🚀 默认代理
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,🎯 直连
-  - RULE-SET,google_ip,🍀 Google,no-resolve
-  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
+  - RULE-SET,google_ip,🚀 默认代理,no-resolve
+  - RULE-SET,telegram_ip,🚀 默认代理,no-resolve
   - RULE-SET,cn_ip,🎯 直连
   - MATCH,🐟 漏网之鱼
 
